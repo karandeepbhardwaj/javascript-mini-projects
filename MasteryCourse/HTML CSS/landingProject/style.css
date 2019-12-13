@@ -1,0 +1,30 @@
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+header.back {
+    background-position: center;
+    background-image: url("l.jpg");
+    background-size: cover;
+    height: 100%;
+}
+
+.btn {
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 300px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn:hover {
+    background-color: #338dc9;
+    border-color: #688bd6;
+    border-width: 5px;
+    cursor: pointer;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Page title</title>
+
+
+   <script src=http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js></script>
+   <script>
+        $(document).ready(function() {
+            var currentImg = 1,
+                totalImages = 4
+                loopTime = 1000,
+                intervalId = null;
+
+
+            function displayTitle(imgNbr) {
+                $('.title').hide();
+                $('#image'+imgNbr).prev('div').show();
+            }
+
+            $('img').on('mouseover', function() {
+                clearInterval(intervalId);
+                displayTitle($(this).parent().attr('id').substring(5));
+            }).on('mouseout', function() {
+                currentImg = $(this).parent().attr('id').substring(5);
+                startLoop();
+            })
+
+            function startLoop() {
+                intervalId = setInterval(function() {
+                    displayTitle(currentImg);
+                    currentImg = ((currentImg == totalImages) ? 1 : parseInt(currentImg)+1);
+                }, loopTime);
+            }
+            startLoop();
+        });
+   </script>
+   <style>
+       .imgcontainer {
+           margin: 10px;
+           float: left;
+           position: relative;
+           text-align: center;
+       }
+       .title {
+           position: absolute;
+           top: 70px;
+           left: 60px;
+           color: #ffffff;
+           display: none;
+       }
+       .img {
+           clear: both;
+       }
+   </style>
+
+</head>
+<body>
+
+<div class="imgcontainer">
+    <div class="title">title 1</div>
+    <div class="img" id="image1"><img src="images/image1.jpg" /></div>
+</div>
+
+<div class="imgcontainer">
+    <div class="title">title 2</div>
+    <div class="img" id="image2"><img src="images/image2.jpg" /></div>
+</div>    
+
+<div class="imgcontainer">
+    <div class="title">title 3</div>
+    <div class="img" id="image3"><img src="images/image3.jpg" /></div>
+</div>
+
+<div class="imgcontainer">
+    <div class="title">title 4</div>
+    <div class="img" id="image4"><img src="images/image4.jpg" /></div>
+</div>    
+
+</body>
+</html>
