@@ -2,7 +2,7 @@ var listOfAnimals = ["Tiger", "bear", "cat", "bear"];
 
 var user1 = {
 
-    userName: "Karandeep",
+    userName: "Karandeep Bhardwaj",
     passWord: "dontask",
     age: 24,
     technologies: ["Coding", "Basketball", "Music"],
@@ -15,8 +15,8 @@ var user1 = {
 
 var user2 = {
 
-    userName: "Jaya",
-    passWord: "kannu",
+    userName: "Jaya Sachdeva",
+    passWord: "JSnov1995",
     age: 23,
     technologies: ["Vellapanti", "Dance", "Cooking"],
     isMarried: false,
@@ -28,3 +28,5 @@ var user2 = {
 
 
 var userList = [user1, user2];
+
+console.log(user1.shout());
