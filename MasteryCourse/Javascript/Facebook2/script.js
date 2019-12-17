@@ -1,7 +1,16 @@
 var database = [{
-    userName: "Karandeep",
-    password: "Dontask"
-}];
+        userName: "Karandeep",
+        password: "dontask"
+    },
+    {
+        userName: "Pardeep",
+        password: "pksbi"
+    },
+    {
+        userName: "Devika",
+        password: "devi"
+    }
+];
 
 var newsFeed = [{
 
@@ -17,9 +26,20 @@ var newsFeed = [{
 var userNamePrompt = prompt("Type in your username please");
 var passwordPrompt = prompt("Whats your password");
 
+function isUserValid(user, pwd) {
+
+    for (var i = 0; i < database.length; i++) {
+        if (database[i].userName === user &&
+            database[i].password === pwd) {
+            return true;
+        }
+    }
+    return false;
+}
+
 function singIn(user, pwd) {
 
-    if (user === database[0].userName && pwd === database[0].password) {
+    if (isUserValid(user, pwd)) {
         console.log(newsFeed);
     } else {
         alert("Sorry wrong username and password");
