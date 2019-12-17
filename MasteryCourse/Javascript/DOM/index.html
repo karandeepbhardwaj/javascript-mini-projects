@@ -1,30 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Javascript + DOM</title>
+    <link rel="stylesheet" type="text/CSS" href="style.css">
 </head>
 
 <body>
-
-    <h1>Shopping List</h1>
+    <h1>Shopping List One</h1>
     <p id="first">Get it done today</p>
-    <input id="userinput" type="text" placeholder="enter items">
-    <button id="enter">Enter</button>
-    <ul>
-        <li class="bold red" random="23">Notebook</li>
-        <li>Jello</li>
-        <li>Spinach</li>
-        <li>Rice</li>
-        <li>Birthday Cake</li>
-        <li>Candles</li>
+    <input id="userInput" type="text" placeholder="Enter items">
+    <button id="enter">Click me</button>
+    <ul id=myList>
+        <li class="italic" random="23">Notebook <button class="delete">Delete</button></li>
+
+        <li class="bold red">Jelly <button class="delete">Delete</button></li>
+        <li>Spinach <button class="delete">Delete</button></li>
+        <li>Rice <button class="delete">Delete</button></li>
+        <li>Birthday cake <button class="delete">Delete</button></li>
+        <li>Candles <button class="delete">Delete</button></li>
     </ul>
-    <script type="text/javascript" src="script.js">
-    </script>
+    <script type="text/javascript" src="script.js"></script>
 </body>
 
 </html>
