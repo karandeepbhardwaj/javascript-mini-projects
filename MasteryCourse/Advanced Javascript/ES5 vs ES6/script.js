@@ -36,3 +36,41 @@ let married = userObject.married;
 
 const { userName, age } = obj;
 let { married } = obj;
+
+
+//------------------------------------------------------------------------------
+
+const name = "Karandeep";
+
+const obj = {
+    [name]: "hello",
+    [1 + 2]: 'hihi'
+}
+
+const a = "simon";
+const b = true;
+const c = {};
+
+const obj2 = {
+    a: a,
+    b: b,
+    c: c
+}
+
+//------------------------------------------------------------------------------
+
+//Template strings
+const greeting = "hello" + name + "I heard you have been doing " + greeting + "?\ after all";
+
+const age = 34;
+const pet = 'dog';
+const greetingBest = `Hello ${name}. You seem to be ${age-10}, what a lovely ${pet} you have`
+
+//------------------------------------------------------------------------------
+//Arrown Functions : 
+
+function add(a, b) {
+    return a + b;
+}
+
+const add2 = (a, b) => a + b;
