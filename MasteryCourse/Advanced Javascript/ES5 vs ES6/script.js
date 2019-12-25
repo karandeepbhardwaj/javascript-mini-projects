@@ -74,3 +74,40 @@ function add(a, b) {
 }
 
 const add2 = (a, b) => a + b;
+
+//------------------------------------------------------------------------------
+
+//Earlier we used to do:
+
+function first1() {
+    var greet = 'hi';
+
+    function second() {
+        alert(greet);
+    }
+    return second;
+}
+
+var newFunc = first();
+newFunc();
+
+//And now with ES6 we do the following for the above code
+
+const first2 = () => {
+    const greet2 = 'hi';
+    const second2 = () => {
+        alert(greet2);
+    }
+    return second2;
+}
+const newFunc2 = first2();
+newFunc2();
+
+//Closures
+//Webbrowsers remembers the parent functions variable used in child function and the references. 
+
+//Currying
+//Prcoess of converting multiple parameters together into taking parameters one at a time.
+
+const multiply = (a, b) => a * b;
+const curriedMultiply = (a) => (b) => a * b;
